@@ -1,7 +1,4 @@
-import {BrowserRouter , Routes , Route} from 'react-router-dom';
-import Header from './components/Header';
-import SingleProduct from './components/SingleProduct';
-import Error from './components/Error';
+import Footer from "./components/Footer"
 
 
 function App() {
@@ -9,13 +6,19 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+        <Footer />
+        {/* <BrowserRouter>
          <Routes>
             <Route path="/" element={<Header />} />
+            <Route path="/" element={<Footer />} />
             <Route path="/product/:id" element={<SingleProduct />} />
             <Route path="*" element={<Error />} />
          </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+    
+      
+      
+
     </>
   )
 }
