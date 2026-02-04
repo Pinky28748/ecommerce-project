@@ -1,7 +1,42 @@
+import { FaUser, FaHeart, FaShoppingBag } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
+
+
 const Header = () => 
 {
   return (
-    <h1>Welcome to Header Component</h1>
+    <header>
+      <div className="container">
+        <div className="navbar">
+          <li>Home</li>
+          <li>Men</li>
+          <li>Women</li>
+          <li>Kids</li>
+        </div>
+        <div className="search-bar">
+          <FaSearch className="search-icon" />
+          <form>
+            <input type="text" placeholder="Search for products" />
+          </form>
+        </div>
+        <div className="icons">
+          <div className="icon">
+        <FaUser />
+        <span>Profile</span>
+      </div>
+
+      <div className="icon">
+        <FaHeart />
+        <span>Wishlist</span>
+      </div>
+
+      <div className="icon">
+        <FaShoppingBag />
+        <span>Bag</span>
+      </div>
+        </div>
+      </div>
+    </header>
   )
 }
 
