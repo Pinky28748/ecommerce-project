@@ -9,12 +9,15 @@ body
     height: 300px;
     width : 100%;
     padding: 20px;
+
 }
 
 .icon-container
 {
     display: flex;
     gap : 20px;
+    justify-content: center;
+    align-items: center;
     
 }
 .icon-footer
@@ -47,11 +50,21 @@ body
     display: flex;
     gap : 20px;
     margin-top : 30px;
-    
-    
-}
+    justify-content: center;
+    }
+    .copy-container{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: 30px;
+    }
+    hr{
+        border: 0.5px solid gray;
+        margin: 20px 0px;
+    }
 .copyright
 {
+
     color : gray;
     font-size: 20px;
 }
