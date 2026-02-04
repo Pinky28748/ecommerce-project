@@ -35,7 +35,10 @@ const Footer = () => {
             
            </div>
            <hr />
-           <span className="copyright">@ 2026 Pinky Thawani.All Rights Reserved</span>
+           <div className="copy-container">
+                <span className="copyright">@ 2026 Pinky Thawani.All Rights Reserved</span>
+           </div>
+          
         </div>
     </footer>
    )
