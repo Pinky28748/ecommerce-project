@@ -8,10 +8,13 @@ const Header = () =>
     <header>
       <div className="container">
         <div className="navbar">
-          <li>Home</li>
-          <li>Men</li>
-          <li>Women</li>
-          <li>Kids</li>
+          <ul>
+            <li>Home</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>Kids</li>
+          </ul>
+          
         </div>
         <div className="search-bar">
           <FaSearch className="search-icon" />

@@ -6,19 +6,22 @@ body
 }
 header{
     background-color: black;
+    
 }
 .container{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 10px;
     gap : 25px;
+    justify-content: center;
     align-items: center;
     height: 75px;
     color : white
     
 }
-.navbar{
-    margin-left: 100px;
+.navbar ul{
+   
     display: flex;
     flex-direction: row;
     gap : 20px;
@@ -141,4 +144,24 @@ header{
 .highlight li
 {
     color: white;
+}
+@media screen and (max-width:480px){
+    .container {
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .navbar{
+        width: 100%;
+        justify-content: center;;
+    }
+}
+@media screen and (min-width:481px) and (max-width:768px){
+    .container {
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .navbar{
+        flex-basis: 100%;
+        justify-content: center;;
+    }
 }
