@@ -10,10 +10,12 @@ const Product = ({img,rating,brand,desc,final,original,discount}) => {
           src={img}
           alt="product"
         />
-      </div>
-      <div className="rating">
+        <div className="rating">
         <span>{rating}</span>
+        <FaStar className="star" />
       </div>
+      </div>
+      
 
       <div className="product-info">
         <span className="brand">{brand}</span>
