@@ -1,6 +1,6 @@
+import {FaStar} from "react-icons/fa";
 
-
-const Product = ({img,brand,desc,final,original,discount}) => {
+const Product = ({img,rating,brand,desc,final,original,discount}) => {
  
   return (
   
@@ -10,6 +10,9 @@ const Product = ({img,brand,desc,final,original,discount}) => {
           src={img}
           alt="product"
         />
+      </div>
+      <div className="rating">
+        <span>{rating}</span>
       </div>
 
       <div className="product-info">
