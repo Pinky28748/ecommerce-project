@@ -1,10 +1,11 @@
 import {FaStar} from "react-icons/fa";
+import {Link} from "react-router-dom";
 
-const Product = ({img,rating,brand,desc,final,original,discount}) => {
+const Product = ({id,img,rating,brand,desc,final,original,discount}) => {
  
   return (
-  
-      <div className="product-card">
+  <Link to={`/product/${id}`} style={{textDecoration:"none",color:"inherit"}} >
+    <div className="product-card">
       <div className="img-container">
         <img
           src={img}
@@ -30,6 +31,8 @@ const Product = ({img,rating,brand,desc,final,original,discount}) => {
       
     </div>
    
+  </Link>
+      
     
     
   );

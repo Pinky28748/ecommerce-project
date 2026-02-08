@@ -155,6 +155,7 @@ header{
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: wrap;
+    gap : 20px;
    
     
     
@@ -163,7 +164,10 @@ header{
     
     background: #fff;
     cursor : pointer;
-     margin : 20px; 
+    margin-top : 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    
     flex : 0 0 16.66%;
 }
 .img-container{
