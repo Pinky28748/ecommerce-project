@@ -22,8 +22,8 @@ const Product = ({img,rating,brand,desc,final,original,discount}) => {
         <span className="desc">{desc}</span>
 
         <div className="price">
-          <span className="final">{final}</span>
-          <span className="original"><strike>{original}</strike></span>
+          <span className="final">Rs.{final}</span>
+          <span className="original"><strike>Rs.{original}</strike></span>
           <span className="discount">({discount})</span>
         </div>
       </div>
@@ -33,6 +33,35 @@ const Product = ({img,rating,brand,desc,final,original,discount}) => {
     
     
   );
-};
+}; 
+/*id,title , price , description , category , image */
+
+/*const Product = ({title,price,desc,cat,img}) => {
+  return (
+    <div className="product-card">
+      <div className="img-container">
+        <img
+          src={img}
+          alt="product"
+        />
+        
+      </div>
+      
+
+      <div className="product-info">
+        <span className="brand">{cat}</span>
+        <span className="title">{title}</span>
+        <span className="desc">{desc}</span>
+
+        <div className="price">
+          <span className="final">{price}</span>
+          
+        </div>
+      </div>
+      
+    </div>
+
+  )
+}*/
 
 export default Product;
