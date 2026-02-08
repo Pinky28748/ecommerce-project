@@ -155,14 +155,16 @@ header{
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: wrap;
-    flex : 25%;
+   
+    
     
 }
 .product-card{
     
     background: #fff;
     cursor : pointer;
-    margin : 20px;
+     margin : 20px; 
+    flex : 0 0 16.66%;
 }
 .img-container{
     width:100%;
@@ -240,10 +242,14 @@ header{
 @media screen and (min-width:481px) and (max-width:768px){
     .container {
         height: auto;
+        display: flex;
         flex-wrap: wrap;
     }
     .navbar{
         flex-basis: 100%;
         justify-content: center;;
+    }
+    .product-card{
+        flex-basis: 0 0 25%;
     }
 }
