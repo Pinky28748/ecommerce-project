@@ -6,7 +6,7 @@ const Product = ({id,image,rating,title,desc,category,price}) => {
   const {rate , count} = rating || {};
  
   return (
-  //<Link to={`/product/${id}`} style={{textDecoration:"none",color:"inherit"}} >
+  <Link to={`/product/${id}`} style={{textDecoration:"none",color:"inherit"}} >
     <div className="product-card">
       <div className="img-container">
         <img
@@ -34,7 +34,7 @@ const Product = ({id,image,rating,title,desc,category,price}) => {
       
     </div>
    
-  //</Link>
+  </Link>
       
     
     
