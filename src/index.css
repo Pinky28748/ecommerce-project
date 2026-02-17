@@ -81,6 +81,13 @@ header{
     cursor: pointer;
     color : cyan;
 }
+.link-item{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+}
 /*footer css */
 .footer
 {

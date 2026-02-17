@@ -1,5 +1,6 @@
 import { FaUser, FaHeart, FaShoppingBag } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
+import { Link} from "react-router-dom"
 
 
 const Header = () => 
@@ -24,8 +25,11 @@ const Header = () =>
         </div>
         <div className="icons">
           <div className="icon">
-        <FaUser />
+            <Link to="/profile" className="link-item">
+              <FaUser />
         <span>Profile</span>
+            </Link>
+        
       </div>
 
       <div className="icon">
