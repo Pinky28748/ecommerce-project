@@ -8,6 +8,7 @@ import { Routes,Route } from "react-router-dom";
 import "./index.css";
 import Wishlist from "./components/Wishlist";
 import Bag from "./components/Bag";
+import HomePage from "./components/HomePage";
 
 
 function App() {
@@ -15,11 +16,11 @@ function App() {
 
   return (
     <>
-        <Header />
+        
         
        
          <Routes>
-             <Route path="/" element={<ProductList />} /> 
+             <Route path="/" element={<HomePage />} /> 
              <Route path="/profile" element={<Profile />} />
              <Route path="/wishlist" element={<Wishlist />} />
              <Route path="/bag" element={<Bag />} />
@@ -27,7 +28,7 @@ function App() {
             <Route path="*" element={<Error />} />
          </Routes>
       
-      <Footer />
+      
     
       
       
