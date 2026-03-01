@@ -252,6 +252,7 @@ header{
 .price{
     color: gray;
     font-weight: 800;
+    font-size: 20px;
 }
 .single-product-button{
     display: flex;
