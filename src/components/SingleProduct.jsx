@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const SingleProduct = () => {
     const {id} = useParams();
@@ -15,6 +17,8 @@ const SingleProduct = () => {
         return <h2>Loading...</h2>
     }
     return (
+        <>
+        <Header />
         <div className="single-product-container">
             <img src={products.image} alt="product image" />
             <h3>{products.title}</h3>
@@ -22,6 +26,9 @@ const SingleProduct = () => {
             <h3>{products.category}</h3>
 
         </div>
+        <Footer />
+        </>
+        
     )
 
 }

@@ -1,6 +1,4 @@
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-import ProductList from "./components/ProductList"
+
 import SingleProduct from "./components/SingleProduct";
 import Profile from "./components/Profile";
 import Error from "./components/Error";

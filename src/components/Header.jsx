@@ -1,4 +1,5 @@
 import { FaUser, FaHeart, FaShoppingBag } from "react-icons/fa";
+
 import { FaSearch } from "react-icons/fa";
 import { Link} from "react-router-dom"
 import { useState } from "react";
@@ -13,7 +14,13 @@ const Header = () =>
       <div className="container">
         <div className="navbar">
           <ul>
-            <li>Home</li>
+            
+            <li>
+              <Link to="/">
+               Home
+              </Link>
+             
+              </li>
             <li>Men</li>
             <li>Women</li>
             <li>Kids</li>
