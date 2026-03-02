@@ -226,3 +226,54 @@ header{
         flex-basis: 0 0 25%;
     }
 }
+/*singleproductpage css */
+.single-product-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap : 5px;
+}
+.single-img-container{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 10px;
+    margin : 20px;
+
+}
+.single-img-container img{
+    height: 400px;
+    width: 400px;
+}
+.title{
+    font-size: 20px;
+}
+.price{
+    color: gray;
+    font-weight: 800;
+    font-size: 20px;
+}
+.single-product-button{
+    display: flex;
+    flex-direction: row;
+    gap : 10px;
+    
+}
+.single-product-button button{
+    cursor: pointer;
+}
+.bag-button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 20px;
+    width: 40%;
+}
+.wish-button{
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 20px;
+    width: 40%;
+}

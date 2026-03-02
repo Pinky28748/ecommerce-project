@@ -20,11 +20,18 @@ const SingleProduct = () => {
         <>
         <Header />
         <div className="single-product-container">
-            <img src={products.image} alt="product image" />
-            <h3>{products.title}</h3>
-            <h3>{products.price}</h3>
-            <h3>{products.category}</h3>
-
+            <div className="single-img-container">
+               <img src={products.image} alt="product image" />
+            </div>
+            <div className="product-details">
+               <h3 className="title">{products.title}</h3>
+            <h3 className="price">Rs.{products.price}</h3>
+            <h3 className="category">{products.category}</h3>
+            <div className="single-product-button">
+                <button className="bag-button">ADD TO BAG</button>
+                <button className="wish-button">WISHLIST</button>
+            </div>
+            </div>
         </div>
         <Footer />
         </>
