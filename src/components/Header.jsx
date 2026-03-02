@@ -2,13 +2,15 @@ import { FaUser, FaHeart, FaShoppingBag } from "react-icons/fa";
 
 import { FaSearch } from "react-icons/fa";
 import { Link} from "react-router-dom"
-import { useState } from "react";
 
 
-const Header = () => 
+
+const Header = ({query,setQuery}) => 
 {
-  const [query,setQuery] = useState("women")
-  console.log(query)
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
+  
   return (
     <header>
       <div className="container">
@@ -30,7 +32,7 @@ const Header = () =>
         <div className="search-bar">
           <FaSearch className="search-icon" />
           <form>
-            <input type="text" placeholder="Search for products" value={query} onChange={(e) => {e.preventDefault()}} />
+            <input type="text" placeholder="Search for products" value={query} onChange={(e)=> setQuery(e.target.value)}  />
           </form>
         </div>
         <div className="icons">
