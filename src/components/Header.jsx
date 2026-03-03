@@ -2,13 +2,20 @@ import { FaUser, FaHeart, FaShoppingBag } from "react-icons/fa";
 
 import { FaSearch } from "react-icons/fa";
 import { Link} from "react-router-dom"
-
+import Dropdown from "./Dropdown.jsx";
+import { useRef, useState,useEffect } from "react";
 
 
 const Header = ({query,setQuery}) => 
 {
   const handleSubmit = (e) => {
     e.preventDefault();
+  }
+  const [isOpen,setisOpen] = useState(false);
+  
+
+  const toggleDropdown = () => {
+    setisOpen(!isOpen);
   }
   
   return (
@@ -36,13 +43,14 @@ const Header = ({query,setQuery}) =>
           </form>
         </div>
         <div className="icons">
-          <div className="icon">
-            <Link to="/profile" className="link-item">
-              <FaUser />
-        <span>Profile</span>
-            </Link>
-        
-      </div>
+          <div className="icon" >
+              <div className="link-item" onClick={toggleDropdown}>
+                <FaUser />
+                <span>Profile</span>
+               </div>
+
+              {isOpen && <Dropdown />}
+        </div>
 
       <div className="icon">
         <Link to="/wishlist" className="link-item">

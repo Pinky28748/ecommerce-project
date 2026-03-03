@@ -1,7 +1,9 @@
+import Dropdown from "./Dropdown";
 import Footer from "./Footer";
 import Header from "./Header";
 import ProductList from "./ProductList";
 import { useState } from "react";
+
 
 const HomePage = () => {
     const [query,setQuery] = useState("");
@@ -9,6 +11,7 @@ const HomePage = () => {
         <>
         <Header query={query} setQuery={setQuery} />
         <ProductList query={query} />
+        
         <Footer />
         </>
        

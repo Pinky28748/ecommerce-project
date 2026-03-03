@@ -76,6 +76,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 .icons .icon:hover{
     cursor: pointer;
@@ -276,4 +277,51 @@ header{
     border: none;
     padding: 20px;
     width: 40%;
+}
+/*Dropdown css*/
+.dropdown{
+    background-color: white;
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap : 5px;
+    position: absolute;
+  top: 50px;            /* adjust based on your header height */
+  right: 0;
+  width: 220px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  z-index: 1000;
+    
+    
+}
+.box1
+{
+    display: flex;
+    flex-direction: column;
+    gap : 5px;
+}
+.login-btn{
+    color : white;
+    background-color: black;
+    border: 1px solid lightgray;
+    padding: 10px;
+    width: 40%;
+}
+.box1-text{
+    font-weight: 800;
+}
+.box1-text2{
+    color: gray;
+}
+hr{
+    color: lightgray;
+}
+.box2 li{
+    list-style-type: none;
+    color: gray;
+    font-weight: 900;
 }
