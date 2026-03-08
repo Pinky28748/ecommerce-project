@@ -7,11 +7,19 @@ import "./index.css";
 import Wishlist from "./components/Wishlist";
 import Bag from "./components/Bag";
 import HomePage from "./components/HomePage";
+import { useState } from "react";
 
 
 function App() {
+  const [cartItems,setcartItems] = useState([]);
+  const addToCart = (product) => {
+    setcartItems([...cartItems,product]);
+  };
+  const removeFromCart = (id) => {
+    const updatedCart = cartItems.filter((item) => item.id !== id);
+    setcartItems(updatedCart);
+  } 
   
-
   return (
     <>
         
@@ -21,8 +29,8 @@ function App() {
              <Route path="/" element={<HomePage />} /> 
              <Route path="/profile" element={<Profile />} />
              <Route path="/wishlist" element={<Wishlist />} />
-             <Route path="/bag" element={<Bag />} />
-             <Route path="/product/:id" element={<SingleProduct />} />
+             <Route path="/bag" element={<Bag cartItems={cartItems} removeFromCart={removeFromCart} />} />
+             <Route path="/product/:id" element={<SingleProduct addToCart={addToCart} />} />
             <Route path="*" element={<Error />} />
          </Routes>
       
