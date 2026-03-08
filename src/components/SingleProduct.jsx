@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const SingleProduct = () => {
+const SingleProduct = ({addToCart}) => {
     const {id} = useParams();
     const [products,setProducts]=useState(null);
     useEffect(() => {
@@ -28,7 +28,7 @@ const SingleProduct = () => {
             <h3 className="price">Rs.{products.price}</h3>
             <h3 className="category">{products.category}</h3>
             <div className="single-product-button">
-                <button className="bag-button">ADD TO BAG</button>
+                <button className="bag-button" onClick={() => {addToCart(products)}}>ADD TO BAG</button>
                 <button className="wish-button">WISHLIST</button>
             </div>
             </div>
