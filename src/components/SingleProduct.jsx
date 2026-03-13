@@ -3,9 +3,12 @@ import { useParams } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const SingleProduct = ({addToCart}) => {
+const SingleProduct = ({addToCart,price}) => {
     const {id} = useParams();
     const [products,setProducts]=useState(null);
+    const [quantity,setquantity] = useState(1);
+    
+    
     useEffect(() => {
         fetch(`https://fakestoreapi.com/products/${id}`)
         .then((res) => res.json())
@@ -30,6 +33,17 @@ const SingleProduct = ({addToCart}) => {
             <div className="single-product-button">
                 <button className="bag-button" onClick={() => {addToCart(products)}}>ADD TO BAG</button>
                 <button className="wish-button">WISHLIST</button>
+                <div className="btn-add">
+                <button className="add" onClick={() => setquantity(e=>e>=10 ? e : e+1)} >+</button>
+                <span>{quantity}</span>
+                {quantity===1 ? (
+                    <button onClick={() => setquantity(0)}>Delete</button>
+                ) : (
+                    <button className="minus" onClick={() => setquantity(e=>e<=1 ? e : e-1)}>-</button>
+                )}
+                
+                </div>
+               {quantity>1 && <h3>Total price : Rs.{(products.price*quantity).toFixed(2)}</h3>}
             </div>
             </div>
         </div>

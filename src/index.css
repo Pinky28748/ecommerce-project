@@ -278,6 +278,27 @@ header{
     padding: 20px;
     width: 40%;
 }
+.btn-add
+{
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ font-size: 20px;
+ 
+}
+.add{
+    border:none;
+    background-color: lightgray;
+    font-size: 20px;
+
+}
+.minus
+{
+ border:none;
+background-color: lightgray;
+font-size: 20px;
+}
 /*Dropdown css*/
 .dropdown{
     background-color: white;
