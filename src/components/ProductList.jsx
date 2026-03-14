@@ -6,7 +6,7 @@ const ProductList = ({query}) => {
     const [filteredProduct,setFilteredProducts] = useState([]);
     const [debounceQuery,setDebouncedQuery] = useState(query);
     useEffect(() => {
-        fetch("https://fakestoreapi.com/products")
+        fetch("http://localhost:5000/api/products")
         .then((res) => res.json())
         .then((data) => {setProducts(data);
         setFilteredProducts(data);

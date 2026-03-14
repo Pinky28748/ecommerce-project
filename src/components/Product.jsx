@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 /* id,title , price , desc , category , img  , rate , count*/
 
 const Product = ({id,image,rating,title,desc,category,price}) => {
-  const {rate , count} = rating || {};
+  
  
   return (
   <Link to={`/product/${id}`} style={{textDecoration:"none",color:"inherit"}} >
@@ -14,9 +14,9 @@ const Product = ({id,image,rating,title,desc,category,price}) => {
           alt="product"
         />
         <div className="rating">
-        <span>{rating.rate}</span>
+        <span>{rating}</span>
         <FaStar className="star" />
-        <span>{rating.count}</span>
+        
       </div>
       </div>
       
