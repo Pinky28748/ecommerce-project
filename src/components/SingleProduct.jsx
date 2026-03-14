@@ -10,7 +10,7 @@ const SingleProduct = ({addToCart,price}) => {
     
     
     useEffect(() => {
-        fetch(`https://fakestoreapi.com/products/${id}`)
+        fetch(`http://localhost:5000/api/products/${id}`)
         .then((res) => res.json())
         .then((data) => setProducts(data));
     },[id]);
