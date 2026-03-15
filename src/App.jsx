@@ -8,6 +8,7 @@ import Wishlist from "./components/Wishlist";
 import Bag from "./components/Bag";
 import HomePage from "./components/HomePage";
 import { useState } from "react";
+import SearchResults from "./components/SearchResults";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
              <Route path="/wishlist" element={<Wishlist />} />
              <Route path="/bag" element={<Bag cartItems={cartItems} removeFromCart={removeFromCart} />} />
              <Route path="/product/:id" element={<SingleProduct addToCart={addToCart} />} />
+             <Route path="/search" element={<SearchResults />} />
             <Route path="*" element={<Error />} />
          </Routes>
       

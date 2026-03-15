@@ -3,11 +3,20 @@ import { FaUser, FaHeart, FaShoppingBag } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { Link} from "react-router-dom"
 import Dropdown from "./Dropdown.jsx";
-import { useRef, useState,useEffect } from "react";
+import { useRef, useState,useEffect, use } from "react";
+import { useNavigate } from "react-router-dom";
 
 
-const Header = ({query,setQuery}) => 
+const Header = () => 
 {
+  const [search,setSearch] = useState("");
+  const navigate = useNavigate();
+  const handleKeyDown = (e) => {
+    if(e.key === "Enter")
+    {
+      navigate(`/search?q=${search}`);
+    }
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
   }
@@ -38,8 +47,8 @@ const Header = ({query,setQuery}) =>
         </div>
         <div className="search-bar">
           <FaSearch className="search-icon" />
-          <form>
-            <input type="text" placeholder="Search for products" value={query} onChange={(e)=> setQuery(e.target.value)}  />
+          <form onSubmit={(e)=>e.preventDefault()}>
+            <input type="text" placeholder="Search for products" value={search} onChange={(e)=> setSearch(e.target.value)} onKeyDown={handleKeyDown}  />
           </form>
         </div>
         <div className="icons">
