@@ -5,10 +5,13 @@ import { Link} from "react-router-dom"
 import Dropdown from "./Dropdown.jsx";
 import { useRef, useState,useEffect, use } from "react";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 
 const Header = () => 
 {
+  const {cart} = useContext(CartContext);
   const [search,setSearch] = useState("");
   const navigate = useNavigate();
   const handleKeyDown = (e) => {
@@ -26,6 +29,7 @@ const Header = () =>
   const toggleDropdown = () => {
     setisOpen(!isOpen);
   }
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
   
   return (
     <header>
@@ -73,6 +77,7 @@ const Header = () =>
         <Link to="/bag" className="link-item">
            <FaShoppingBag />
         <span>Bag</span>
+        {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
         </Link>
         
       </div>
