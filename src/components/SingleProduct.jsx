@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import { CartContext } from "../context/CartContext";
 
-const SingleProduct = ({addToCart,price}) => {
+const SingleProduct = () => {
     const {id} = useParams();
     const [products,setProducts]=useState(null);
     const [quantity,setquantity] = useState(1);
+    const {addToCart} = useContext(CartContext);
     
     
     useEffect(() => {
@@ -31,7 +33,7 @@ const SingleProduct = ({addToCart,price}) => {
             <h3 className="price">Rs.{products.price}</h3>
             <h3 className="category">{products.category}</h3>
             <div className="single-product-button">
-                <button className="bag-button" onClick={() => {addToCart(products)}}>ADD TO BAG</button>
+                <button className="bag-button" onClick={()=>addToCart(products)}  >ADD TO BAG</button>
                 <button className="wish-button">WISHLIST</button>
                 <div className="btn-add">
                 <button className="add" onClick={() => setquantity(e=>e>=10 ? e : e+1)} >+</button>

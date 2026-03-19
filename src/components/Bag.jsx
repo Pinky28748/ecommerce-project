@@ -1,31 +1,29 @@
-const Bag = ({ cartItems, removeFromCart }) => {
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
+
+const Cart = () => {
+
+  const { cart, removeFromCart } = useContext(CartContext);
+
   return (
-    <div className="bag-container">
-      <h2>Your Bag</h2>
+    <div>
 
-      {cartItems.length === 0 ? (
-        <p className="empty">Your bag is empty</p>
-      ) : (
-        <div className="bag-items">
-          {cartItems.map((p) => (
-            <div className="bag-item" key={p.id}>
-              <img src={p.image} alt={p.title} />
+      {cart.map(item => (
 
-              <div className="bag-info">
-                <h4>{p.title}</h4>
-                <p className="price">Rs.{p.price}</p>
-                <button onClick={() => removeFromCart(p.id)}>
-                  Remove
-                </button>
-              </div>
-            </div>
-          ))}
+        <div key={item.id}>
+          <h3>{item.title}</h3>
+          <p>Qty: {item.quantity}</p>
+
+          <button onClick={() => removeFromCart(item.id)}>
+            Remove
+          </button>
+
         </div>
-      )}
+
+      ))}
+
     </div>
   );
 };
 
-
-
-export default Bag;
+export default Cart;
