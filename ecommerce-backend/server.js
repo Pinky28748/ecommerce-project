@@ -25,6 +25,27 @@ app.get("/api/products/:id", (req, res) => {
 
   res.json(product);
 });
+app.get("/api/search", (req, res) => {
+  const query = req.query.q?.toLowerCase().trim() || "";
+  const words = query.split(" ");
+
+  const result = products.filter(product =>
+    words.every(word =>
+      product.title.toLowerCase().includes(word)
+    )
+  );
+
+  res.json(result);
+});
+app.get("/api/suggestions", (req, res) => {
+  const query = req.query.q?.toLowerCase() || "";
+
+  const suggestions = products
+    .filter(p => p.title.toLowerCase().includes(query))
+    .map(p => p.title);
+
+  res.json(suggestions);
+});
 
 
 
